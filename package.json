@@ -1,0 +1,19 @@
+{
+  "name": "kvn-bug-hunter",
+  "version": "1.0.0",
+  "description": "KvN Ultimate Elite Hacker & Bug Hunter Suite for Termux",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "bug-hunter",
+    "termux",
+    "kvnproject",
+    "vdp",
+    "recon"
+  ],
+  "author": "KvN Project",
+  "license": "MIT",
+  "dependencies": {}
+}
