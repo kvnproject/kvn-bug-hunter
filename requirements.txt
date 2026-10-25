@@ -1,0 +1,39 @@
+# ==============================================================================
+# KVN ULTIMATE BUG HUNTER - COMPLETE REQUIREMENTS & ENVIRONMENT SPECIFICATION
+# ==============================================================================
+# Project Name : KvN Ultimate Bug Hunter (Termux Edition)
+# Developer    : KvN Project (kvnprojectsupport@gmail.com)
+# License      : MIT
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. SYSTEM ENVIRONMENT & PACKAGES (TERMUX / LINUX OS)
+# ------------------------------------------------------------------------------
+# Jalankan perintah berikut di terminal sebelum pertama kali ngerun:
+# pkg update && pkg upgrade -y
+# pkg install nodejs git -y
+
+nodejs>=16.0.0
+git>=2.0.0
+pingutils
+
+# ------------------------------------------------------------------------------
+# 2. RUNTIME CORE MODULES (NODE.JS BUILT-IN)
+# ------------------------------------------------------------------------------
+# Catatan: Tidak memerlukan instalasi 'npm install' eksternal.
+# Semua modul di bawah adalah paket bawaan (native core) dari Node.js runtime:
+
+https           # Untuk penanganan HTTP Over TLS/SSL request & scanning secure endpoints
+http            # Untuk penanganan standard HTTP request & banner checking
+fs              # File system module untuk generasi draf laporan otomatis (.md)
+readline        # Modul antarmuka menu CLI interaktif & input prompt di Termux
+child_process   # Utilitas eksekusi perintah sistem (Ping host)
+net             # Modul low-level TCP socket handler untuk Port Scanner
+
+# ------------------------------------------------------------------------------
+# 3. ANSI TERMINAL VISUAL & STYLING REQUIREMENTS
+# ------------------------------------------------------------------------------
+# Mendukung ANSI Escape Sequences 24-bit / 8-bit untuk rendering warna pelangi:
+# - Foreground Color Codes (\x1b[31m - \x1b[36m)
+# - Text Style Formatting (Bold: \x1b[1m, Dim: \x1b[2m, Reset: \x1b[0m)
+# ==============================================================================
